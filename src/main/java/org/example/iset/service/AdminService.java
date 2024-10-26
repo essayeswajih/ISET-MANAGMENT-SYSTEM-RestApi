@@ -12,19 +12,28 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AdminService {
     private final AdminRepository adminRepository;
-    List<Admin> findAll(){
+
+    public List<Admin> findAll() {
         return adminRepository.findAll();
     }
-    Admin findById(Integer id){
+
+    public Admin findById(Integer id) {
         return adminRepository.findById(id).orElseThrow(
-                ()-> new EntityNotFoundException("Admin Not Found")
+                () -> new EntityNotFoundException("Admin Not Found")
         );
     }
-    Admin save(Admin admin){
+
+    public Admin save(Admin admin) {
         return adminRepository.saveAndFlush(admin);
     }
 
-    void delete(Integer id){
+    public void delete(Integer id) {
         adminRepository.delete(findById(id));
+    }
+
+    public Admin findByIdCin(Integer cin) {
+        return adminRepository.findByUser_Cin(cin).orElseThrow(
+                () -> new EntityNotFoundException("Admin Not Found")
+        );
     }
 }

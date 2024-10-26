@@ -1,6 +1,9 @@
 package org.example.iset.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,4 +24,9 @@ public class Level {
     @OneToMany
     private List<Class> classes;
 
+    @OneToMany
+    private List<Course> firstSemCourses;
+
+    @OneToMany
+    private List<Course> secSemCourses;
 }

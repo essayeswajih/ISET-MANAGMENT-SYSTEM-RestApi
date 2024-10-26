@@ -22,5 +22,6 @@ public class Classroom {
 
     @OneToMany
     private List<Dep> depList;
+
     private Integer maxCapacity;
 }

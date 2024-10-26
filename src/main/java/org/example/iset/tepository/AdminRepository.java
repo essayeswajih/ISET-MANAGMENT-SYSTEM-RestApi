@@ -3,5 +3,8 @@ package org.example.iset.tepository;
 import org.example.iset.entity.actors.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AdminRepository extends JpaRepository<Admin,Integer> {
+import java.util.Optional;
+
+public interface AdminRepository extends JpaRepository<Admin, Integer> {
+    Optional<Admin> findByUser_Cin(Integer cin);
 }
