@@ -12,8 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 
 @RestController
-@RequestMapping("/professors")
 @RequiredArgsConstructor
+@RequestMapping("/api/v1/admin/professors")
 public class ProfessorController {
 
     private final ProfessorService professorService;
