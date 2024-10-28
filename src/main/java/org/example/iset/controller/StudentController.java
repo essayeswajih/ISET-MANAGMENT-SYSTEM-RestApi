@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @RestController
-@RequestMapping("/students")
+@RequestMapping("/api/v1/admin/students")
 @RequiredArgsConstructor
 public class StudentController {
 
