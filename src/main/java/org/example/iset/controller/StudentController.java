@@ -18,15 +18,14 @@ public class StudentController {
 
     private final StudentService studentService;
 
-
     // Find all students
     @GetMapping
     public ResponseEntity<?> findAll() {
         HashMap<String, Object> res = new HashMap<>();
         try {
-            List<Student> etudiants = studentService.findAll();
+            List<Student> students = studentService.findAll();
             res.put("message", "ok");
-            res.put("data", etudiants);
+            res.put("data", students);
             return ResponseEntity.ok(res);
         } catch (Exception e) {
             res.put("message", "error");
