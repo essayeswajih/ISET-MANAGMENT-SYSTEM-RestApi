@@ -1,4 +1,4 @@
-package org.example.iset.tepository;
+package org.example.iset.repository;
 
 import org.example.iset.entity.actors.Student;
 import org.springframework.data.jpa.repository.JpaRepository;

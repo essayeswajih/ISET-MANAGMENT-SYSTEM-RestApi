@@ -3,7 +3,7 @@ package org.example.iset.service;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.example.iset.entity.actors.Student;
-import org.example.iset.tepository.StudentRepository;
+import org.example.iset.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,8 +24,8 @@ public class StudentService {
         );
     }
 
-    public Student save(Student etudiant) {
-        return etudiantRepository.saveAndFlush(etudiant);
+    public Student save(Student student) {
+        return etudiantRepository.saveAndFlush(student);
     }
 
     public void delete(Integer id) {

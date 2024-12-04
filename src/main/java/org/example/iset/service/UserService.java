@@ -3,7 +3,7 @@ package org.example.iset.service;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.example.iset.entity.actors.User;
-import org.example.iset.tepository.UserRepository;
+import org.example.iset.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

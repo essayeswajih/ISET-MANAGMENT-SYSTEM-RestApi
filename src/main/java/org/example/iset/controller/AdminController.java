@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
-//@CrossOrigin("/api/v1/admin")
+@CrossOrigin("*")
 @RequestMapping("/api/v1/admin")
 public class AdminController {
     private final AdminService adminService;

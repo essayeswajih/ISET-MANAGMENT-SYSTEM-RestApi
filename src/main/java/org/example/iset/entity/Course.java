@@ -16,5 +16,5 @@ public class Course {
     @GeneratedValue
     private Integer id;
     private String courseName;
-
+    private String courseDescription;
 }
